@@ -5,10 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Форма</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
+    <form id="form">
+        <!-- Выпадающий список для выбора города -->
+        <label for="city">Город:</label>
+        <select id="city" name="city">
+            <option value="default">Выберите город</option>
+        </select>
+        <!-- Выпадающий список для выбора цеха -->
+        <label for="workshop">Цех:</label>
+        <select id="workshop" name="workshop" disabled>
+            <option value="default">Выберите цех</option>
+        </select>
+        <!-- Выпадающий список для выбора сотрудника -->
+        <label for="employee">Сотрудник:</label>
+        <select id="employee" name="employee" disabled>
+            <option value="default">Выберите сотрудника</option>
+        </select>
+        <!-- Отображение текущего времени для проверки работы подбора бригады и смены-->
+        <p>Текущее время: <span id="current-time"></span></p>
+        <!-- Поля для отображения бригады и смены (только для чтения) -->
+        <label for="brigade">Бригада:</label>
+        <input id="brigade" name="brigade" readonly disabled />
+        <label for="shift">Смена:</label>
+        <input id="shift" name="shift" readonly disabled />
+        <!-- Кнопки для сброса и отправки формы -->
+        <button id="reset" type="button">Сбросить</button>
+        <button id="submit" type="submit">Отправить</button>
+    </form>
+    <script src="index.js" type="module"></script>
 </body>
 
 </html>
